@@ -1,0 +1,43 @@
+inherit_from: .rubocop_todo.yml
+
+require:
+  - rubocop-bitjourney
+
+AllCops:
+  Exclude:
+    - vendor/**/*
+    - db/**/*
+    - bin/**
+  RunRailsCops: true
+
+Lint/AssignmentInCondition:
+  Enabled: false
+
+Lint/UnusedBlockArgument:
+  Enabled: false
+
+Metrics/LineLength:
+  Enabled: false
+
+Rails/HasAndBelongsToMany:
+  Enabled: false
+
+Rails/TimeZone:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/FileName:
+  Exclude:
+    - lib/rubocop-bitjourney.rb
+
+Style/NumericLiterals:
+  MinDigits: 10
+
+Style/PercentLiteralDelimiters:
+  PreferredDelimiters:
+    '%': '{}'
+
+Style/SignalException:
+  Enabled: false
