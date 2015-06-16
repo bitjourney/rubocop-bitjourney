@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'pry'
 
 describe RuboCop::Cop::RSpec::IsExpectedTo do
   subject(:cop) { described_class.new }
