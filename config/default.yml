@@ -1,0 +1,3 @@
+Style/OneLineLet:
+  Description: 'Use one line let when the content is one line'
+  Enabled: true
