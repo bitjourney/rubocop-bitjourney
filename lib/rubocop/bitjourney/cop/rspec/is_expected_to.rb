@@ -15,9 +15,13 @@ module RuboCop
         def on_block(node)
           _method, _args, body = *node
           _receiver, property_name, *_args = *body
-          if property_name == :should
-            add_offense(node, :expression, MSG)
-          end
+          return unless property_name == :should
+
+          expr = body.loc.expression
+          bp = expr.begin_pos
+          ep = expr.end_pos
+          range = Parser::Source::Range.new(expr.source_buffer, bp, ep)
+          add_offense(node, range, MSG)
         end
       end
     end
