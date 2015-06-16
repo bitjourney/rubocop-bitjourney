@@ -5,10 +5,7 @@ require:
 
 AllCops:
   Exclude:
-    - vendor/**/*
-    - db/**/*
     - bin/**
-  RunRailsCops: true
 
 Lint/AssignmentInCondition:
   Enabled: false
